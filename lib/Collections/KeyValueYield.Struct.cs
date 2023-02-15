@@ -48,6 +48,7 @@ namespace Meg.Delta.Collections
 			}
 		}
 		
+		
 		public void Deconstruct
 		(
 			out TKey key,
