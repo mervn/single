@@ -8,11 +8,11 @@ namespace Meg.Delta.Collections
 		public static KeyValueYield<TKey, TValue> Create<TKey, TValue>
 		(
 			TKey key,
-			TValue value,
-			Action<TValue> context
+			(TValue, bool) value,
+			Action<TKey, TValue> process
 		)
 		{
-			return new KeyValueYield<TKey, TValue>(key, value, context);
+			return new KeyValueYield<TKey, TValue>(key, value, process);
 		}
 	}
 }

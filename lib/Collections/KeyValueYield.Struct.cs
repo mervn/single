@@ -7,20 +7,20 @@ namespace Meg.Delta.Collections
 	public readonly struct KeyValueYield<TKey, TValue>
 	{
 		private readonly TKey _key;
-		private readonly TValue _value;
-		private readonly Action<TValue> _context;
+		private readonly (TValue, bool) _value;
+		private readonly Action<TKey, TValue> _process;
 		
 		
 		public KeyValueYield
 		(
 			TKey key,
-			TValue value,
-			Action<TValue> context
+			(TValue, bool) value,
+			Action<TKey, TValue> process
 		)
 		{
 			_key = key;
 			_value = value;
-			_context = context;
+			_process = process;
 		}
 		
 		
@@ -32,7 +32,7 @@ namespace Meg.Delta.Collections
 			}
 		}
 		
-		public TValue Value
+		public (Content: TValue, NaN: bool) Value
 		{
 			get
 			{
@@ -40,24 +40,24 @@ namespace Meg.Delta.Collections
 			}
 		}
 		
-		public Action<TValue> Context
+		public Action<TKey, TValue> Process
 		{
 			get
 			{
-				return _context;
+				return _process;
 			}
 		}
 		
 		public void Deconstruct
 		(
 			out TKey key,
-			out TValue value,
-			out Action<TValue> context
+			out (Content: TValue, NaN: bool) value,
+			out Action<TKey, TValue> process
 		)
 		{
 			key = Key;
 			value = Value;
-			context = Context;
+			process = Process;
 			
 			return;
 		}
@@ -66,7 +66,7 @@ namespace Meg.Delta.Collections
 		(
 		)
 		{
-			return string.Format("[{0}, {1}, {2}]", Key, Value, Context);
+			return string.Format("[{0}, {1}, {2}]", Key, Value.Content, Process);
 		}	
 	}
 }
