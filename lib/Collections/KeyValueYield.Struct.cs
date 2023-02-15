@@ -4,14 +4,14 @@ using System;
 namespace Meg.Delta.Collections
 {
 	[Serializable]
-	public readonly struct KeyValueContextTriple<TKey, TValue>
+	public readonly struct KeyValueYield<TKey, TValue>
 	{
 		private readonly TKey _key;
 		private readonly TValue _value;
 		private readonly Action<TValue> _context;
 		
 		
-		public KeyValueContextTriple
+		public KeyValueYield
 		(
 			TKey key,
 			TValue value,
