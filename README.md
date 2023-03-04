@@ -1,3 +1,13 @@
+<!--
+	SPDX-License-Identifer: CC0-1.0
+    SPDX-FileCopyrightText: 2023 Mervin G.
+
+	SPDX-FileType: DOCUMENTATION
+    SPDX-FileType: TEXT
+
+	SPDX-FileComment: Overview of project details.
+-->
+
 # Delta
 
 ___

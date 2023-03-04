@@ -1,3 +1,12 @@
+/*
+	SPDX-License-Identifer: Apache-2.0 OR LGPL-3.0-or-later
+    SPDX-FileCopyrightText: 2023 Mervin G.
+
+	SPDX-FileType: SOURCE
+
+	SPDX-FileComment: Collection of key-value-delegate bundles.
+*/
+
 using System;
 using System.Collections;
 using System.Diagnostics.CodeAnalysis;

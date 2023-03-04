@@ -1,5 +1,13 @@
-using System;
+/*
+	SPDX-License-Identifer: Apache-2.0 OR LGPL-3.0-or-later
+    SPDX-FileCopyrightText: 2023 Mervin G.
 
+	SPDX-FileType: SOURCE
+
+	SPDX-FileComment: Data-structure bundling a key, value, and delegate.
+*/
+
+using System;
 
 namespace Meg.Delta.Collections
 {
